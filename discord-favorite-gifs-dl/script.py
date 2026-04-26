@@ -5,10 +5,10 @@ import logging
 import requests
 
 try:
-    os.mkdir('videos')
-    os.mkdir(os.path.join('videos', 'copies'))
-    os.mkdir('gifs')
-    os.mkdir(os.path.join('gifs', 'copies'))
+    os.mkdir('../videos')
+    os.mkdir(os.path.join('../videos', 'copies'))
+    os.mkdir('../gifs')
+    os.mkdir(os.path.join('../gifs', 'copies'))
     # with open(f'logs_{datetime.datetime.now().strftime('%Y%m%d%H%M')}', 'w') as f:
     #     pass
 except FileExistsError:
@@ -21,7 +21,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-with open('discord-favorite-gifs.json', 'r') as file:
+with open('../discord-favorite-gifs.json', 'r') as file:
     data = json.load(file)
 
 i = 0
